@@ -4,7 +4,7 @@ exports.getAllPosts = async (req, res) => {
   try {
     const pool = await poolPromise;
     const result = await pool.request().query("SELECT * FROM Posts");
-
+    //testing out git 
     res.status(200).json({
       success: true,
       data: result.recordset,
